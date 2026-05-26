@@ -1,0 +1,148 @@
+{
+    "dataRoles": [
+        { "displayName": "Card 1 – Measure", "name": "measure1", "kind": "Measure" },
+        { "displayName": "Card 2 – Measure", "name": "measure2", "kind": "Measure" },
+        { "displayName": "Card 3 – Measure", "name": "measure3", "kind": "Measure" },
+        { "displayName": "Card 4 – Measure", "name": "measure4", "kind": "Measure" },
+        { "displayName": "Card 5 – Measure", "name": "measure5", "kind": "Measure" }
+    ],
+    "objects": {
+        "card1": {
+            "displayName": "Card 1",
+            "properties": {
+                "title":           { "type": { "text": true } },
+                "accentColor":     { "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":       { "type": { "fill": { "solid": { "color": true } } } },
+                "alignment":       { "type": { "text": true } },
+                "fontSize":        { "type": { "formatting": { "fontSize": true } } },
+                "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
+                "show":            { "type": { "bool": true } },
+                "cfEnabled":          { "type": { "bool": true } },
+                "cfHigherIsBetter":   { "type": { "bool": true } },
+                "cfGoodThreshold":    { "type": { "numeric": true } },
+                "cfBadThreshold":     { "type": { "numeric": true } },
+                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
+                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
+                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "card2": {
+            "displayName": "Card 2",
+            "properties": {
+                "title":           { "type": { "text": true } },
+                "accentColor":     { "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":       { "type": { "fill": { "solid": { "color": true } } } },
+                "alignment":       { "type": { "text": true } },
+                "fontSize":        { "type": { "formatting": { "fontSize": true } } },
+                "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
+                "show":            { "type": { "bool": true } },
+                "cfEnabled":          { "type": { "bool": true } },
+                "cfHigherIsBetter":   { "type": { "bool": true } },
+                "cfGoodThreshold":    { "type": { "numeric": true } },
+                "cfBadThreshold":     { "type": { "numeric": true } },
+                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
+                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
+                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "card3": {
+            "displayName": "Card 3 (Center)",
+            "properties": {
+                "title":           { "type": { "text": true } },
+                "accentColor":     { "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":       { "type": { "fill": { "solid": { "color": true } } } },
+                "alignment":       { "type": { "text": true } },
+                "fontSize":        { "type": { "formatting": { "fontSize": true } } },
+                "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
+                "show":            { "type": { "bool": true } },
+                "cfEnabled":          { "type": { "bool": true } },
+                "cfHigherIsBetter":   { "type": { "bool": true } },
+                "cfGoodThreshold":    { "type": { "numeric": true } },
+                "cfBadThreshold":     { "type": { "numeric": true } },
+                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
+                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
+                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "card4": {
+            "displayName": "Card 4",
+            "properties": {
+                "title":           { "type": { "text": true } },
+                "accentColor":     { "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":       { "type": { "fill": { "solid": { "color": true } } } },
+                "alignment":       { "type": { "text": true } },
+                "fontSize":        { "type": { "formatting": { "fontSize": true } } },
+                "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
+                "show":            { "type": { "bool": true } },
+                "cfEnabled":          { "type": { "bool": true } },
+                "cfHigherIsBetter":   { "type": { "bool": true } },
+                "cfGoodThreshold":    { "type": { "numeric": true } },
+                "cfBadThreshold":     { "type": { "numeric": true } },
+                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
+                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
+                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "card5": {
+            "displayName": "Card 5",
+            "properties": {
+                "title":           { "type": { "text": true } },
+                "accentColor":     { "type": { "fill": { "solid": { "color": true } } } },
+                "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+                "textColor":       { "type": { "fill": { "solid": { "color": true } } } },
+                "alignment":       { "type": { "text": true } },
+                "fontSize":        { "type": { "formatting": { "fontSize": true } } },
+                "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
+                "show":            { "type": { "bool": true } },
+                "cfEnabled":          { "type": { "bool": true } },
+                "cfHigherIsBetter":   { "type": { "bool": true } },
+                "cfGoodThreshold":    { "type": { "numeric": true } },
+                "cfBadThreshold":     { "type": { "numeric": true } },
+                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
+                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
+                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        },
+        "layout": {
+            "displayName": "Layout",
+            "properties": {
+                "cardGap":         { "type": { "numeric": true } },
+                "cornerRadius":    { "type": { "numeric": true } },
+                "showIcons":       { "type": { "bool": true } },
+                "showShadow":      { "type": { "bool": true } },
+                "showBorder":      { "type": { "bool": true } },
+                "cardBorderColor": { "type": { "fill": { "solid": { "color": true } } } }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "measure1": { "max": 1 },
+                    "measure2": { "max": 1 },
+                    "measure3": { "max": 1 },
+                    "measure4": { "max": 1 },
+                    "measure5": { "max": 1 }
+                }
+            ],
+            "table": {
+                "rows": {
+                    "select": [
+                        { "bind": { "to": "measure1" } },
+                        { "bind": { "to": "measure2" } },
+                        { "bind": { "to": "measure3" } },
+                        { "bind": { "to": "measure4" } },
+                        { "bind": { "to": "measure5" } }
+                    ],
+                    "dataReductionAlgorithm": { "top": { "count": 1 } }
+                }
+            }
+        }
+    ],
+    "privileges": []
+}

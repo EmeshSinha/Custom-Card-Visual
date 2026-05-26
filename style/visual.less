@@ -1,0 +1,185 @@
+// ═══════════════════════════════════════════════════════════════
+//  Consolidated 5-in-1 KPI Card  ·  Power BI Custom Visual Styles
+// ═══════════════════════════════════════════════════════════════
+
+@transition   : 0.25s ease;
+
+// ── Main Outer Consolidated Card Container ───────────────────────
+.pbi-consolidated-card {
+    display:               flex;
+    flex-direction:        column;
+    width:                 100%;
+    height:                100%;
+    box-sizing:            border-box;
+    padding:               10px 14px;
+    font-family:           'Segoe UI', 'Inter', -apple-system, sans-serif;
+    overflow:              hidden;
+    justify-content:       center;
+    align-items:           stretch;
+    transition:            box-shadow @transition, border-color @transition;
+    user-select:           none; /* Prevents text-selection highlighting during drags */
+    -webkit-user-select:   none;
+    -ms-user-select:       none;
+}
+
+// ── Main KPI block (Large Top Center Metric) ─────────────────────
+.pbi-consolidated-card__main-kpi {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    width:          100%;
+    margin-bottom:  12px;
+    flex-shrink:    0;
+    justify-content: center;
+
+    .pbi-consolidated-card__main-value {
+        font-weight:    700;
+        line-height:    1.05;
+        letter-spacing: -0.02em;
+        margin-bottom:  2px;
+        white-space:    nowrap;
+        overflow:       hidden;
+        text-overflow:  ellipsis;
+        width:          100%;
+    }
+
+    .pbi-consolidated-card__main-label {
+        font-size:      13px;
+        color:          #666666;
+        font-weight:    500;
+        white-space:    nowrap;
+        overflow:       hidden;
+        text-overflow:  ellipsis;
+        width:          100%;
+    }
+}
+
+// ── Sub KPIs 2x2 Grid Layout ─────────────────────────────────────
+.pbi-consolidated-card__sub-grid {
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:    auto auto;
+    column-gap:            20px;
+    row-gap:               14px;
+    width:                 100%;
+    flex-grow:             1;
+    align-content:         center;
+}
+
+// ── Individual Sub KPI items ─────────────────────────────────────
+.pbi-consolidated-card__sub-item {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    padding:        2px 4px;
+    box-sizing:     border-box;
+    width:          100%;
+
+    .pbi-consolidated-card__sub-value {
+        font-weight:    700;
+        line-height:    1.1;
+        letter-spacing: -0.01em;
+        margin-bottom:  2px;
+        white-space:    nowrap;
+        overflow:       hidden;
+        text-overflow:  ellipsis;
+        width:          100%;
+    }
+
+    .pbi-consolidated-card__sub-label {
+        font-size:      11px;
+        color:          #666666;
+        font-weight:    500;
+        white-space:    nowrap;
+        overflow:       hidden;
+        text-overflow:  ellipsis;
+        width:          100%;
+    }
+}
+
+// ── Alignment helpers (flex alignment overrides) ─────────────────
+.pbi-card--align-left {
+    align-items: flex-start !important;
+    text-align:  left !important;
+}
+
+.pbi-card--align-center {
+    align-items: center !important;
+    text-align:  center !important;
+}
+
+.pbi-card--align-right {
+    align-items: flex-end !important;
+    text-align:  right !important;
+}
+
+// ── Trend badge for sub KPIs ──────────────────────────────────────
+.pbi-card__trend {
+    display:         inline-flex;
+    align-items:     center;
+    gap:             3px;
+    font-size:       9px;
+    font-weight:     600;
+    padding:         1px 6px;
+    border-radius:   999px;
+    margin-top:      2px;
+    
+    .pbi-trend-icon {
+        width:  10px;
+        height: 10px;
+        display: inline-flex;
+        svg { width: 100%; height: 100%; }
+    }
+
+    &--up {
+        background: rgba(16, 185, 129, 0.12);
+        color:      #10B981;
+        border:     1px solid rgba(16, 185, 129, 0.20);
+    }
+    &--down {
+        background: rgba(239, 68, 68, 0.12);
+        color:      #EF4444;
+        border:     1px solid rgba(239, 68, 68, 0.20);
+    }
+    &--flat {
+        background: rgba(148, 163, 184, 0.10);
+        color:      #64748B;
+        border:     1px solid rgba(148, 163, 184, 0.15);
+    }
+}
+
+// ── Empty state ───────────────────────────────────────────────────
+.pbi-empty {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    color:           #64748B;
+    font-size:       14px;
+    text-align:      center;
+    padding:         10px;
+    box-sizing:      border-box;
+    width:           100%;
+    height:          100%;
+}
+
+// ── CF Status Pill ────────────────────────────────────────────────
+.pbi-card__cf-pill {
+    display:        inline-flex;
+    align-items:    center;
+    gap:            4px;
+    font-size:      9px;
+    font-weight:    600;
+    padding:        2px 8px;
+    border-radius:  999px;
+    margin-top:     2px;
+
+    .pbi-cf-icon {
+        width:       10px;
+        height:      10px;
+        display:     inline-flex;
+        flex-shrink: 0;
+        svg { width: 100%; height: 100%; }
+    }
+}
