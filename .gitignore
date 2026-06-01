@@ -1,19 +1,46 @@
-# Dependency directories
+# Node.js dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Temporary and build artifacts
+# Power BI Visual build & temporary artifacts
 .tmp/
 dist/
+*.pbiviz
 pbiviz.json.tmp
-
-# Log files
-*.log
-npm-debug.log*
-
-# OS and Editor files
-.DS_Store
-Thumbs.db
-.vscode/
 
 # Webpack statistics and performance reports
 webpack.statistics.*.html
+
+# Code Quality & TypeScript caches
+.eslintcache
+.prettiercache
+*.tsbuildinfo
+
+# OS and System files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor/IDE configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Security, Certificates & Secrets
+*.pfx
+*.cer
+*.pem
+*.key
+*.crt
+.env
+.env.local
+.env.*.local
+
