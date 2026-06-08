@@ -17,14 +17,7 @@
                 "alignment":       { "type": { "text": true } },
                 "fontSize":        { "type": { "formatting": { "fontSize": true } } },
                 "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
-                "show":            { "type": { "bool": true } },
-                "cfEnabled":          { "type": { "bool": true } },
-                "cfHigherIsBetter":   { "type": { "bool": true } },
-                "cfGoodThreshold":    { "type": { "numeric": true } },
-                "cfBadThreshold":     { "type": { "numeric": true } },
-                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
-                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
-                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+                "show":            { "type": { "bool": true } }
             }
         },
         "card2": {
@@ -37,14 +30,7 @@
                 "alignment":       { "type": { "text": true } },
                 "fontSize":        { "type": { "formatting": { "fontSize": true } } },
                 "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
-                "show":            { "type": { "bool": true } },
-                "cfEnabled":          { "type": { "bool": true } },
-                "cfHigherIsBetter":   { "type": { "bool": true } },
-                "cfGoodThreshold":    { "type": { "numeric": true } },
-                "cfBadThreshold":     { "type": { "numeric": true } },
-                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
-                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
-                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+                "show":            { "type": { "bool": true } }
             }
         },
         "card3": {
@@ -57,14 +43,7 @@
                 "alignment":       { "type": { "text": true } },
                 "fontSize":        { "type": { "formatting": { "fontSize": true } } },
                 "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
-                "show":            { "type": { "bool": true } },
-                "cfEnabled":          { "type": { "bool": true } },
-                "cfHigherIsBetter":   { "type": { "bool": true } },
-                "cfGoodThreshold":    { "type": { "numeric": true } },
-                "cfBadThreshold":     { "type": { "numeric": true } },
-                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
-                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
-                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+                "show":            { "type": { "bool": true } }
             }
         },
         "card4": {
@@ -77,14 +56,7 @@
                 "alignment":       { "type": { "text": true } },
                 "fontSize":        { "type": { "formatting": { "fontSize": true } } },
                 "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
-                "show":            { "type": { "bool": true } },
-                "cfEnabled":          { "type": { "bool": true } },
-                "cfHigherIsBetter":   { "type": { "bool": true } },
-                "cfGoodThreshold":    { "type": { "numeric": true } },
-                "cfBadThreshold":     { "type": { "numeric": true } },
-                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
-                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
-                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+                "show":            { "type": { "bool": true } }
             }
         },
         "card5": {
@@ -97,14 +69,7 @@
                 "alignment":       { "type": { "text": true } },
                 "fontSize":        { "type": { "formatting": { "fontSize": true } } },
                 "valueFontSize":   { "type": { "formatting": { "fontSize": true } } },
-                "show":            { "type": { "bool": true } },
-                "cfEnabled":          { "type": { "bool": true } },
-                "cfHigherIsBetter":   { "type": { "bool": true } },
-                "cfGoodThreshold":    { "type": { "numeric": true } },
-                "cfBadThreshold":     { "type": { "numeric": true } },
-                "cfGoodColor":        { "type": { "fill": { "solid": { "color": true } } } },
-                "cfBadColor":         { "type": { "fill": { "solid": { "color": true } } } },
-                "cfNeutralColor":     { "type": { "fill": { "solid": { "color": true } } } }
+                "show":            { "type": { "bool": true } }
             }
         },
         "layout": {

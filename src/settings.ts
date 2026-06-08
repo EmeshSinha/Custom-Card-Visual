@@ -1,5 +1,6 @@
 "use strict";
 
+import powerbi from "powerbi-visuals-api";
 import { formattingSettings } from "powerbi-visuals-utils-formattingmodel";
 
 import FormattingSettingsCard  = formattingSettings.SimpleCard;
@@ -23,13 +24,16 @@ class Card1Settings extends FormattingSettingsCard {
         name: "title", displayName: "KPI Name", placeholder: "Card 1 title", value: TITLE_DEFAULTS[0]
     });
     accentColor = new formattingSettings.ColorPicker({
-        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[0] }
+        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[0] },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     backgroundColor = new formattingSettings.ColorPicker({
-        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" }
+        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     textColor = new formattingSettings.ColorPicker({
-        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" }
+        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     alignment = new formattingSettings.ItemDropdown({
         name: "alignment", displayName: "Text Alignment",
@@ -44,36 +48,12 @@ class Card1Settings extends FormattingSettingsCard {
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
-    cfEnabled = new formattingSettings.ToggleSwitch({
-        name: "cfEnabled", displayName: "Enable Conditional Formatting", value: false
-    });
-    cfHigherIsBetter = new formattingSettings.ToggleSwitch({
-        name: "cfHigherIsBetter", displayName: "Higher Value is Better", value: true
-    });
-    cfGoodThreshold = new formattingSettings.NumUpDown({
-        name: "cfGoodThreshold", displayName: "Good Threshold (≥)", value: 1000
-    });
-    cfBadThreshold = new formattingSettings.NumUpDown({
-        name: "cfBadThreshold", displayName: "Bad Threshold (≤)", value: 500
-    });
-    cfGoodColor = new formattingSettings.ColorPicker({
-        name: "cfGoodColor", displayName: "Good Color", value: { value: "#10B981" }
-    });
-    cfBadColor = new formattingSettings.ColorPicker({
-        name: "cfBadColor", displayName: "Bad Color", value: { value: "#EF4444" }
-    });
-    cfNeutralColor = new formattingSettings.ColorPicker({
-        name: "cfNeutralColor", displayName: "Neutral Color", value: { value: "#F59E0B" }
-    });
     name        = "card1";
     displayName = "Card 1";
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize,
-        this.cfEnabled, this.cfHigherIsBetter,
-        this.cfGoodThreshold, this.cfBadThreshold,
-        this.cfGoodColor, this.cfBadColor, this.cfNeutralColor
+        this.fontSize, this.valueFontSize
     ];
 }
 
@@ -82,13 +62,16 @@ class Card2Settings extends FormattingSettingsCard {
         name: "title", displayName: "KPI Name", placeholder: "Card 2 title", value: TITLE_DEFAULTS[1]
     });
     accentColor = new formattingSettings.ColorPicker({
-        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[1] }
+        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[1] },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     backgroundColor = new formattingSettings.ColorPicker({
-        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" }
+        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     textColor = new formattingSettings.ColorPicker({
-        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" }
+        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     alignment = new formattingSettings.ItemDropdown({
         name: "alignment", displayName: "Text Alignment",
@@ -103,36 +86,12 @@ class Card2Settings extends FormattingSettingsCard {
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
-    cfEnabled = new formattingSettings.ToggleSwitch({
-        name: "cfEnabled", displayName: "Enable Conditional Formatting", value: false
-    });
-    cfHigherIsBetter = new formattingSettings.ToggleSwitch({
-        name: "cfHigherIsBetter", displayName: "Higher Value is Better", value: true
-    });
-    cfGoodThreshold = new formattingSettings.NumUpDown({
-        name: "cfGoodThreshold", displayName: "Good Threshold (≥)", value: 1000
-    });
-    cfBadThreshold = new formattingSettings.NumUpDown({
-        name: "cfBadThreshold", displayName: "Bad Threshold (≤)", value: 500
-    });
-    cfGoodColor = new formattingSettings.ColorPicker({
-        name: "cfGoodColor", displayName: "Good Color", value: { value: "#10B981" }
-    });
-    cfBadColor = new formattingSettings.ColorPicker({
-        name: "cfBadColor", displayName: "Bad Color", value: { value: "#EF4444" }
-    });
-    cfNeutralColor = new formattingSettings.ColorPicker({
-        name: "cfNeutralColor", displayName: "Neutral Color", value: { value: "#F59E0B" }
-    });
     name        = "card2";
     displayName = "Card 2";
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize,
-        this.cfEnabled, this.cfHigherIsBetter,
-        this.cfGoodThreshold, this.cfBadThreshold,
-        this.cfGoodColor, this.cfBadColor, this.cfNeutralColor
+        this.fontSize, this.valueFontSize
     ];
 }
 
@@ -141,13 +100,16 @@ class Card3Settings extends FormattingSettingsCard {
         name: "title", displayName: "KPI Name", placeholder: "Card 3 title", value: TITLE_DEFAULTS[2]
     });
     accentColor = new formattingSettings.ColorPicker({
-        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[2] }
+        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[2] },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     backgroundColor = new formattingSettings.ColorPicker({
-        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" }
+        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     textColor = new formattingSettings.ColorPicker({
-        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" }
+        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     alignment = new formattingSettings.ItemDropdown({
         name: "alignment", displayName: "Text Alignment",
@@ -162,36 +124,12 @@ class Card3Settings extends FormattingSettingsCard {
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
-    cfEnabled = new formattingSettings.ToggleSwitch({
-        name: "cfEnabled", displayName: "Enable Conditional Formatting", value: false
-    });
-    cfHigherIsBetter = new formattingSettings.ToggleSwitch({
-        name: "cfHigherIsBetter", displayName: "Higher Value is Better", value: true
-    });
-    cfGoodThreshold = new formattingSettings.NumUpDown({
-        name: "cfGoodThreshold", displayName: "Good Threshold (≥)", value: 1000
-    });
-    cfBadThreshold = new formattingSettings.NumUpDown({
-        name: "cfBadThreshold", displayName: "Bad Threshold (≤)", value: 500
-    });
-    cfGoodColor = new formattingSettings.ColorPicker({
-        name: "cfGoodColor", displayName: "Good Color", value: { value: "#10B981" }
-    });
-    cfBadColor = new formattingSettings.ColorPicker({
-        name: "cfBadColor", displayName: "Bad Color", value: { value: "#EF4444" }
-    });
-    cfNeutralColor = new formattingSettings.ColorPicker({
-        name: "cfNeutralColor", displayName: "Neutral Color", value: { value: "#F59E0B" }
-    });
     name        = "card3";
     displayName = "Card 3 (Center)";
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize,
-        this.cfEnabled, this.cfHigherIsBetter,
-        this.cfGoodThreshold, this.cfBadThreshold,
-        this.cfGoodColor, this.cfBadColor, this.cfNeutralColor
+        this.fontSize, this.valueFontSize
     ];
 }
 
@@ -200,13 +138,16 @@ class Card4Settings extends FormattingSettingsCard {
         name: "title", displayName: "KPI Name", placeholder: "Card 4 title", value: TITLE_DEFAULTS[3]
     });
     accentColor = new formattingSettings.ColorPicker({
-        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[3] }
+        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[3] },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     backgroundColor = new formattingSettings.ColorPicker({
-        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" }
+        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     textColor = new formattingSettings.ColorPicker({
-        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" }
+        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     alignment = new formattingSettings.ItemDropdown({
         name: "alignment", displayName: "Text Alignment",
@@ -221,36 +162,12 @@ class Card4Settings extends FormattingSettingsCard {
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
-    cfEnabled = new formattingSettings.ToggleSwitch({
-        name: "cfEnabled", displayName: "Enable Conditional Formatting", value: false
-    });
-    cfHigherIsBetter = new formattingSettings.ToggleSwitch({
-        name: "cfHigherIsBetter", displayName: "Higher Value is Better", value: true
-    });
-    cfGoodThreshold = new formattingSettings.NumUpDown({
-        name: "cfGoodThreshold", displayName: "Good Threshold (≥)", value: 1000
-    });
-    cfBadThreshold = new formattingSettings.NumUpDown({
-        name: "cfBadThreshold", displayName: "Bad Threshold (≤)", value: 500
-    });
-    cfGoodColor = new formattingSettings.ColorPicker({
-        name: "cfGoodColor", displayName: "Good Color", value: { value: "#10B981" }
-    });
-    cfBadColor = new formattingSettings.ColorPicker({
-        name: "cfBadColor", displayName: "Bad Color", value: { value: "#EF4444" }
-    });
-    cfNeutralColor = new formattingSettings.ColorPicker({
-        name: "cfNeutralColor", displayName: "Neutral Color", value: { value: "#F59E0B" }
-    });
     name        = "card4";
     displayName = "Card 4";
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize,
-        this.cfEnabled, this.cfHigherIsBetter,
-        this.cfGoodThreshold, this.cfBadThreshold,
-        this.cfGoodColor, this.cfBadColor, this.cfNeutralColor
+        this.fontSize, this.valueFontSize
     ];
 }
 
@@ -259,13 +176,16 @@ class Card5Settings extends FormattingSettingsCard {
         name: "title", displayName: "KPI Name", placeholder: "Card 5 title", value: TITLE_DEFAULTS[4]
     });
     accentColor = new formattingSettings.ColorPicker({
-        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[4] }
+        name: "accentColor", displayName: "Accent Color", value: { value: ACCENT_DEFAULTS[4] },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     backgroundColor = new formattingSettings.ColorPicker({
-        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" }
+        name: "backgroundColor", displayName: "Background Color", value: { value: "#FFFFFF" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     textColor = new formattingSettings.ColorPicker({
-        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" }
+        name: "textColor", displayName: "Value Text Color", value: { value: "#111111" },
+        instanceKind: powerbi.VisualEnumerationInstanceKinds.ConstantOrRule
     });
     alignment = new formattingSettings.ItemDropdown({
         name: "alignment", displayName: "Text Alignment",
@@ -280,36 +200,12 @@ class Card5Settings extends FormattingSettingsCard {
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
-    cfEnabled = new formattingSettings.ToggleSwitch({
-        name: "cfEnabled", displayName: "Enable Conditional Formatting", value: false
-    });
-    cfHigherIsBetter = new formattingSettings.ToggleSwitch({
-        name: "cfHigherIsBetter", displayName: "Higher Value is Better", value: true
-    });
-    cfGoodThreshold = new formattingSettings.NumUpDown({
-        name: "cfGoodThreshold", displayName: "Good Threshold (≥)", value: 1000
-    });
-    cfBadThreshold = new formattingSettings.NumUpDown({
-        name: "cfBadThreshold", displayName: "Bad Threshold (≤)", value: 500
-    });
-    cfGoodColor = new formattingSettings.ColorPicker({
-        name: "cfGoodColor", displayName: "Good Color", value: { value: "#10B981" }
-    });
-    cfBadColor = new formattingSettings.ColorPicker({
-        name: "cfBadColor", displayName: "Bad Color", value: { value: "#EF4444" }
-    });
-    cfNeutralColor = new formattingSettings.ColorPicker({
-        name: "cfNeutralColor", displayName: "Neutral Color", value: { value: "#F59E0B" }
-    });
     name        = "card5";
     displayName = "Card 5";
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize,
-        this.cfEnabled, this.cfHigherIsBetter,
-        this.cfGoodThreshold, this.cfBadThreshold,
-        this.cfGoodColor, this.cfBadColor, this.cfNeutralColor
+        this.fontSize, this.valueFontSize
     ];
 }
 
