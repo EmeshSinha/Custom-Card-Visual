@@ -29,6 +29,7 @@ interface CardData {
     alignment:       string;        // "left" | "center" | "right"
     fontSize:        number;
     valueFontSize:   number;
+    fontFamily:      string;
     show:            boolean;
 }
 
@@ -119,6 +120,8 @@ export class Visual implements IVisual {
             const alignRaw  = (cs.alignment.value as any)?.value ?? "center";
             const alignment = ["left", "center", "right"].includes(alignRaw) ? alignRaw : "center";
 
+            const fontFamily = cs.fontFamily.value ?? "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif";
+
             return {
                 title:           cs.title.value               ?? `KPI ${idx + 1}`,
                 value:           formatValue(raw),
@@ -129,6 +132,7 @@ export class Visual implements IVisual {
                 alignment,
                 fontSize:        cs.fontSize.value             ?? 12,
                 valueFontSize:   cs.valueFontSize.value        ?? 26,
+                fontFamily,
                 show:            cs.show.value                 ?? true
             };
         });
@@ -138,7 +142,6 @@ export class Visual implements IVisual {
         const s            = this.formattingSettings;
         const gap          = s.layout.cardGap.value      ?? 12;
         const cornerRadius = s.layout.cornerRadius.value ?? 16;
-        const showIcons    = s.layout.showIcons.value    ?? true;
         const showShadow   = s.layout.showShadow.value   ?? true;
         const showBorder   = s.layout.showBorder.value   ?? true;
         const cardBorderColor = s.layout.cardBorderColor.value?.value ?? "#4A6B82";
@@ -171,12 +174,14 @@ export class Visual implements IVisual {
             value.className = "pbi-consolidated-card__main-value";
             value.style.fontSize = `${mainCard.valueFontSize}px`;
             value.style.color = mainCard.textColor;
+            value.style.fontFamily = mainCard.fontFamily;
             value.textContent = mainCard.value;
             mainKpiSection.appendChild(value);
 
             const label = document.createElement("div");
             label.className = "pbi-consolidated-card__main-label";
             label.style.fontSize = `${mainCard.fontSize}px`;
+            label.style.fontFamily = mainCard.fontFamily;
             label.textContent = mainCard.title;
             mainKpiSection.appendChild(label);
 
@@ -201,43 +206,16 @@ export class Visual implements IVisual {
                 value.className = "pbi-consolidated-card__sub-value";
                 value.style.fontSize = `${card.valueFontSize}px`;
                 value.style.color = card.textColor;
+                value.style.fontFamily = card.fontFamily;
                 value.textContent = card.value;
                 item.appendChild(value);
 
                 const label = document.createElement("div");
                 label.className = "pbi-consolidated-card__sub-label";
                 label.style.fontSize = `${card.fontSize}px`;
+                label.style.fontFamily = card.fontFamily;
                 label.textContent = card.title;
                 item.appendChild(label);
-
-                if (showIcons && card.value !== "—" && card.numericValue !== null) {
-                    const raw = card.numericValue;
-                    const trend = document.createElement("div");
-                    trend.className = "pbi-card__trend";
-
-                    const iconSpan = document.createElement("span");
-                    iconSpan.className = "pbi-trend-icon";
-                    
-                    const textSpan = document.createElement("span");
-
-                    if (raw > 0) {
-                        trend.classList.add("pbi-card__trend--up");
-                        iconSpan.appendChild(parseSVG(ICON_UP));
-                        textSpan.textContent = "Positive";
-                    } else if (raw < 0) {
-                        trend.classList.add("pbi-card__trend--down");
-                        iconSpan.appendChild(parseSVG(ICON_DOWN));
-                        textSpan.textContent = "Negative";
-                    } else {
-                        trend.classList.add("pbi-card__trend--flat");
-                        iconSpan.appendChild(parseSVG(ICON_FLAT));
-                        textSpan.textContent = "Neutral";
-                    }
-
-                    trend.appendChild(iconSpan);
-                    trend.appendChild(textSpan);
-                    item.appendChild(trend);
-                }
 
                 subKpiGrid.appendChild(item);
             });

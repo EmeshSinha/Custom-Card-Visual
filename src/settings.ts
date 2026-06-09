@@ -45,6 +45,9 @@ class Card1Settings extends FormattingSettingsCard {
     valueFontSize = new formattingSettings.NumUpDown({
         name: "valueFontSize", displayName: "Value Font Size", value: 28
     });
+    fontFamily = new formattingSettings.FontPicker({
+        name: "fontFamily", displayName: "Font Family", value: "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+    });
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
@@ -53,7 +56,7 @@ class Card1Settings extends FormattingSettingsCard {
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize
+        this.fontSize, this.valueFontSize, this.fontFamily
     ];
 }
 
@@ -83,6 +86,9 @@ class Card2Settings extends FormattingSettingsCard {
     valueFontSize = new formattingSettings.NumUpDown({
         name: "valueFontSize", displayName: "Value Font Size", value: 28
     });
+    fontFamily = new formattingSettings.FontPicker({
+        name: "fontFamily", displayName: "Font Family", value: "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+    });
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
@@ -91,7 +97,7 @@ class Card2Settings extends FormattingSettingsCard {
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize
+        this.fontSize, this.valueFontSize, this.fontFamily
     ];
 }
 
@@ -121,6 +127,9 @@ class Card3Settings extends FormattingSettingsCard {
     valueFontSize = new formattingSettings.NumUpDown({
         name: "valueFontSize", displayName: "Value Font Size", value: 28
     });
+    fontFamily = new formattingSettings.FontPicker({
+        name: "fontFamily", displayName: "Font Family", value: "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+    });
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
@@ -129,7 +138,7 @@ class Card3Settings extends FormattingSettingsCard {
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize
+        this.fontSize, this.valueFontSize, this.fontFamily
     ];
 }
 
@@ -159,6 +168,9 @@ class Card4Settings extends FormattingSettingsCard {
     valueFontSize = new formattingSettings.NumUpDown({
         name: "valueFontSize", displayName: "Value Font Size", value: 28
     });
+    fontFamily = new formattingSettings.FontPicker({
+        name: "fontFamily", displayName: "Font Family", value: "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+    });
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
@@ -167,7 +179,7 @@ class Card4Settings extends FormattingSettingsCard {
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize
+        this.fontSize, this.valueFontSize, this.fontFamily
     ];
 }
 
@@ -197,6 +209,9 @@ class Card5Settings extends FormattingSettingsCard {
     valueFontSize = new formattingSettings.NumUpDown({
         name: "valueFontSize", displayName: "Value Font Size", value: 28
     });
+    fontFamily = new formattingSettings.FontPicker({
+        name: "fontFamily", displayName: "Font Family", value: "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+    });
     show = new formattingSettings.ToggleSwitch({
         name: "show", displayName: "Show Card", value: true
     });
@@ -205,7 +220,7 @@ class Card5Settings extends FormattingSettingsCard {
     slices: Array<FormattingSettingsSlice> = [
         this.show, this.title, this.alignment,
         this.accentColor, this.backgroundColor, this.textColor,
-        this.fontSize, this.valueFontSize
+        this.fontSize, this.valueFontSize, this.fontFamily
     ];
 }
 
@@ -216,9 +231,6 @@ class LayoutCardSettings extends FormattingSettingsCard {
     });
     cornerRadius = new formattingSettings.NumUpDown({
         name: "cornerRadius", displayName: "Corner Radius (px)", value: 16
-    });
-    showIcons = new formattingSettings.ToggleSwitch({
-        name: "showIcons", displayName: "Show Trend Icons", value: true
     });
     showShadow = new formattingSettings.ToggleSwitch({
         name: "showShadow", displayName: "Card Shadow", value: false
@@ -233,7 +245,7 @@ class LayoutCardSettings extends FormattingSettingsCard {
     displayName = "Layout";
     slices: Array<FormattingSettingsSlice> = [
         this.cardGap, this.cornerRadius,
-        this.showIcons, this.showShadow, this.showBorder,
+        this.showShadow, this.showBorder,
         this.cardBorderColor
     ];
 }

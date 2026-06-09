@@ -2,7 +2,7 @@
     "visual": {
         "name": "customCard",
         "displayName": "CustomCard",
-        "guid": "Custom_Card_14",
+        "guid": "Custom_Card_15",
         "visualClassName": "Visual",
         "version": "1.0.0.0",
         "description": "custom card visual",
